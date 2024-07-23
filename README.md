@@ -6,7 +6,7 @@ This is a template for a 404 Error page styled to look like a terminal interface
 
 ### index.html
 - **Semantic HTML5 Structure**: Utilizes modern HTML5 elements for better semantics and accessibility.
-- **Security Meta Tags**: Includes various security meta tags to enhance security and prevent common web vulnerabilities.
+- **Security Meta Tags**: Various security meta tags to enhance security and prevent common web vulnerabilities.
   - **Content-Security-Policy**: Restricts sources of content to prevent XSS attacks.
   - **Strict-Transport-Security**: Ensures the page is only accessed over HTTPS.
   - **Referrer-Policy**: Controls the information sent in the Referer header.
@@ -39,10 +39,10 @@ This is a template for a 404 Error page styled to look like a terminal interface
 
 ## Credits
 - Inspired by [Robin Selmer's 404 Template](https://freefrontend.com/html-css-404-page-templates/)
-  - **Original Source**: [CodePen by Robin Selmer](https://codepen.io/robinselmer/pen/vJjbOZ)
-- **Normalize.css**: [Normalize.css by necolas](https://github.com/necolas/normalize.css)
-- **Font**: [Inconsolata by Google Fonts](https://fonts.google.com/specimen/Inconsolata)
-- **GIF**: [Giphy Image](https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif)
+  - Original Source: [CodePen by Robin Selmer](https://codepen.io/robinselmer/pen/vJjbOZ)
+- Normalize.css: [Normalize.css by necolas](https://github.com/necolas/normalize.css)
+- Font: [Inconsolata by Google Fonts](https://fonts.google.com/specimen/Inconsolata)
+- GIF: [Giphy Image](https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif)
 
 ## Personal Note
 This project is not only a practical 404 page for me but also a demo to help me re-familiarize myself with HTML, CSS, and JavaScript. I use these technologies infrequently, and this project allowed me to explore and understand recent developments and best practices in web development. Feel free to customize and use this template for your projects.
