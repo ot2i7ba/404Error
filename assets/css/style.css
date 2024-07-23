@@ -1,0 +1,180 @@
+/* Normalize CSS for consistent rendering across all browsers */
+@import url('normalize.css');
+
+/* Include Inconsolata font */
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../fonts/Inconsolata-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Root variables for easy customization */
+:root {
+  --main-bg-color: #000000;
+  --gradient-start: #11581E;
+  --gradient-end: #041607;
+  --font-color: rgba(128, 255, 128, 0.8);
+  --text-shadow-1: rgba(51, 255, 51, 1);
+  --text-shadow-2: rgba(255, 255, 255, 0.8);
+  --scan-color-1: rgba(32, 128, 32, 0.2);
+  --scan-color-2: rgba(32, 128, 32, 0.8);
+  --font-family: 'Inconsolata', monospace;
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-in-out;
+  --output-margin-bottom: 1rem; /* Margin bottom for better readability */
+}
+
+html {
+  min-height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--main-bg-color);
+  background-image: radial-gradient(var(--gradient-start), var(--gradient-end)), url("../images/giphy.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  color: var(--font-color);
+  text-shadow: 0 0 1ex var(--text-shadow-1), 0 0 2px var(--text-shadow-2);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.noise, .overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.noise {
+  background-image: url("../images/giphy.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: .02;
+}
+
+.overlay {
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  background-size: auto 4px;
+  z-index: 1;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    transparent 0%,
+    var(--scan-color-1) 2%,
+    var(--scan-color-2) 3%,
+    var(--scan-color-1) 3%,
+    transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear infinite;
+}
+
+@keyframes scan {
+  0% { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  padding: 2rem;
+  text-transform: uppercase;
+  height: 100vh; /* Full height to be vertically centered */
+}
+
+.title {
+  text-align: left; /* Align text in <h1> to the left */
+  width: 100%; /* Ensure text in <h1> stays left-aligned */
+}
+
+.output {
+  color: var(--font-color);
+  text-align: left;
+  text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px var(--text-shadow-2);
+  width: 100%; /* Ensure text in the "output" class stays left-aligned */
+  margin-bottom: var(--output-margin-bottom); /* Margin bottom for better readability */
+}
+
+.output::before {
+  content: "> ";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+a:hover {
+  color: rgba(128, 255, 128, 1);
+}
+
+a::before {
+  content: "[";
+}
+
+a::after {
+  content: "]";
+}
+
+.errorcode {
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .terminal {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  body {
+    font-size: 1.4rem;
+  }
+}

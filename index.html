@@ -1,0 +1,35 @@
+<!-- 
+  This page was inspired by Robin Selmer's 404 Template and modernized by ot2i7ba.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Error 404 Page">
+  <title>404 Not Found</title>
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self';">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" href="assets/fonts/Inconsolata.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="overlay"></div>
+  <main class="terminal" role="main">
+    <h1 class="title">Error <span class="errorcode">404</span></h1>
+    <p class="output">The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
+    <p class="output">Please try to <a id="go-back-link" href="#">go back</a> or <a href="#">return to the homepage</a>.</p>
+    <p class="output">Good luck.</p>
+  </main>
+
+  <script src="assets/js/go-back.js"></script>
+</body>
+</html>
