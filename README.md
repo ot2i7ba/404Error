@@ -44,5 +44,16 @@ This is a template for a 404 Error page styled to look like a terminal interface
 - Font: [Inconsolata by Google Fonts](https://fonts.google.com/specimen/Inconsolata)
 - GIF: [Giphy Image](https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif)
 
-## Personal Note
+___
+
+# License
+This project is licensed under the **[MIT license](https://github.com/ot2i7ba/404Error/blob/main/LICENSE)**, providing users with flexibility and freedom to use and modify the software according to their needs.
+
+# Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for review.
+
+# Disclaimer
+This project is provided without warranties. Users are advised to review the accompanying license for more information on the terms of use and limitations of liability.
+
+## Conclusion
 This project is not only a practical 404 page for me but also a demo to help me re-familiarize myself with HTML, CSS, and JavaScript. I use these technologies infrequently, and this project allowed me to explore and understand recent developments and best practices in web development. Feel free to customize and use this template for your projects.
